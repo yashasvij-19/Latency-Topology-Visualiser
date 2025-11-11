@@ -1,8 +1,16 @@
-const Legend = () => (
-  <div style={{ background: '#fff', padding: 8, borderRadius: 6 }}>
-    <span style={{ color: 'red' }}>● AWS</span><br />
-    <span style={{ color: 'green' }}>● GCP</span><br />
-    <span style={{ color: 'blue' }}>● Azure</span>
+const Legend: React.FC = () => (
+  <div className="legend-overlay">
+    <h3>Cloud Providers</h3>
+    <div className="legend-marker">
+      <span className="legend-color-dot" style={{ background: "red" }} /> AWS
+    </div>
+    <div className="legend-marker">
+      <span className="legend-color-dot" style={{ background: "green" }} /> GCP
+    </div>
+    <div className="legend-marker">
+      <span className="legend-color-dot" style={{ background: "blue" }} /> Azure
+    </div>
   </div>
 );
+
 export default Legend;
