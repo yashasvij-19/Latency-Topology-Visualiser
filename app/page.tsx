@@ -1,9 +1,10 @@
-
+import Map3D from "../components/Map3D";
+import 'maplibre-gl/dist/maplibre-gl.css';
 
 export default function Home() {
   return (
     <div>
-     Hello World
+     <Map3D/>
     </div>
   );
 }
