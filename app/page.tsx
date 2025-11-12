@@ -1,10 +1,14 @@
-import Map3D from "../components/Map3D";
+import SidePanel from '../components/sidePanel';
+import Map3D from '../components/Map3D';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
-     <Map3D/>
+    <div style={{ display: 'flex', height: '100vh' }}>
+      <SidePanel />
+      <main style={{ flex: 1, position: 'relative' }}>
+        <Map3D />
+      </main>
     </div>
   );
 }

@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,12 +16,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 body.dark {
   background: #1a1b28 !important;
   transition: background 0.3s;
 }
-
 body.light {
   background: #fff !important;
   transition: background 0.3s;
@@ -95,10 +90,8 @@ body.light {
   font-weight: 600;
   transition: color 0.3s;
 }
-
 body.dark .legend-overlay h3 { color: #e7eaf6; }
 body.light .legend-overlay h3 { color: #393b52; }
-
 .legend-marker {
   display: flex;
   align-items: center;
@@ -107,7 +100,6 @@ body.light .legend-overlay h3 { color: #393b52; }
   font-weight: 500;
   gap: 7px;
 }
-
 .legend-color-dot {
   display: inline-block;
   width: 14px;
@@ -117,13 +109,11 @@ body.light .legend-overlay h3 { color: #393b52; }
   border: 2px solid #fff;
   box-shadow: 0 1px 5px rgba(0,0,0,0.10);
 }
-
 body.dark .legend-overlay {
   background: rgba(34, 37, 54, 0.92);
   color: #fff;
   border: 1px solid rgba(55,55,90,0.16);
 }
-
 body.light .legend-overlay {
   background: rgba(255,255,255,0.96);
   color: #24292f;
@@ -135,4 +125,58 @@ body.light .legend-overlay {
   to { transform: translateY(0) scale(1); opacity: 1; }
 }
 
+@keyframes pulseArc {
+  0%   { stroke-opacity: 0.65; }
+  50%  { stroke-opacity: 1; }
+  100% { stroke-opacity: 0.65; }
+}
+.pulsing-arc {
+  animation: pulseArc 1.5s infinite;
+}
 
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column !important;
+  }
+  .side-panel {
+    width: 100% !important;
+    min-width: unset !important;
+    margin-bottom: 18px;
+    height: auto !important;
+  }
+  .map-container {
+    width: 100% !important;
+    height: 45vh !important;
+  }
+  .legend-overlay {
+    position: static !important;
+    margin: 10px 0 0 0 !important;
+    width: 100% !important;
+  }
+}
+@media (max-width: 650px) {
+  .responsive-row {
+    flex-direction: column !important;
+  }
+  .responsive-panel {
+    width: 100% !important;
+    min-width: unset !important;
+    margin-bottom: 12px;
+    border-radius: 0 0 14px 14px !important;
+  }
+  .map-responsive {
+    min-width: 0 !important;
+    width: 100vw !important;
+    height: 38vh !important;
+    min-height: 220px !important;
+  }
+  .panel-bottom {
+    max-width: 98vw !important;
+    width: 97vw !important;
+    box-sizing: border-box !important;
+    margin: 10px auto 4px auto !important;
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
+  }
+}
