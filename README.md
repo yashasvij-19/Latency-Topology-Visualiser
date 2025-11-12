@@ -61,7 +61,7 @@ Switchable Themes: Light and dark mode with one-click toggle
 
 Responsive: Automatic re-layout for mobile and touch devices
 
-##How Each UI Element Works
+## How Each UI Element Works
 
 Side Panel: Shows cloud provider legend, navigation to trends view, provider toggles (does not filter latency directly)
 
