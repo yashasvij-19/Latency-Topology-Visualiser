@@ -1,8 +1,8 @@
-##Latency Topology Visualizer
+# Latency Topology Visualizer
 
 This project is a Next.js-based web app for interactive, real-time visualization and exploration of global cryptocurrency exchange latency, with support for historical trends, cloud provider regions, and responsive control. It leverages Maplibre GL JS for 3D geospatial rendering, provides rich filtering, and is designed for clarity in trading infrastructure analysis.
 
-##Getting Started
+## Getting Started
 
 Prerequisites
 Node.js v18+
@@ -25,7 +25,7 @@ Editing and Hot Reload
 Modify any component in the app/ or components/ directories.
 All changes are reflected live via Next.js hot reloading.
 
-##Project Structure
+## Project Structure
 
 /app
   layout.tsx       # Global app frame and metadata
@@ -47,7 +47,7 @@ All changes are reflected live via Next.js hot reloading.
   globals.css      # Custom theming, responsive tweaks
 
 
-##Features
+## Features
 
 3D Interactive Globe with real-time latency arcs (Maplibre GL JS, no map token required)
 
@@ -71,7 +71,7 @@ Search: Accepts partial names/codes (for regions or exchanges), recenters globe,
 
 Historical View (/trends): Choose exchange pairs and period, see full latency stats and history as interactive charts (no map overlays).
 
-##Assumptions and Implementation Notes
+# Assumptions and Implementation Notes
 
 All network latency data is simulated/randomized for demonstration; historical stats are demo data and do not hit an API.
 
